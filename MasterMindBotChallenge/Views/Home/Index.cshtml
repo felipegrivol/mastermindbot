@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Mastermind Bot Chat";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <p>
+        First inform you name and start a new game. <br />
+        Then, proceed making guesses, the secret code has 8 positions with values from 1 to 8.<br />
+        You can request the bot to make your next guess for you as well.<br />
+        <br /><br />
+        Your name: <br />
+        <input type="text" id="name" name="name" />
+    </p>
+    <input type="button" value="Start New Game" id="start" name="start" />
+    <p>Guess:<input type="text" id="message" name="message" /></p>
+    <input type="button" value="Send Guess" id="send" name="send" />
+    <input type="button" value="Bot Hint" id="bot" name="bot" />
+    <br />
+    <br />
+    History: <br />
+    <ul id="history"></ul>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/Chat.js"></script>
+</body>
+</html>
